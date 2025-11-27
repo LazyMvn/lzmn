@@ -1,6 +1,316 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
-    height: 100vh;
+    margin: 0;
+}
+header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+header div {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 80%;
+}
+header a {
+    padding: 25px 10%;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+}
+header a:hover {
+    background-color: black;
+    color: white;
+}
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.images .container {
+    border: 1px solid black;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    grid-template-areas: 
+    "b1 b1 b2 b3"
+    "b4 b5 b2 b6"
+    "b4 b7 b7 b6";
+}
+.images .container div {
+    background-size: 100% 100%;
+    opacity: 0.5;
+    transition: 0.5s ease;
+}
+.images .b1 {
+    grid-area: b1;
+    background-image: url(b1.jpg);
+}
+.images .b2 {
+    grid-area: b2;
+    background-image: url(b2.webp);
+}
+.images .b3 {
+    grid-area: b3;
+    background-image: url(b3.jpg);
+}
+.images .b4 {
+    grid-area: b4;
+    background-image: url(b4.webp);
+}
+.images .b5 {
+    grid-area: b5;
+    background-image: url(b5.jpg);
+}
+.images .b6 {
+    grid-area: b6;
+    background-image: url(b6.jpg);
+}
+.images .b7 {
+    grid-area: b7;
+    background-image: url(b7.webp);
+}
+.images .container div:hover {
+    opacity: 1;
+}
+.colors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.colors .container {
+    border: 1px solid black;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    grid-template-areas: 
+    "red blue yellow green"
+    "empty empty empty empty"
+    ;
+}
+.colors .container div {
+    transition: 5s linear;
+}
+.red {
+    grid-area: red;
+    background-color: red;
+}
+.blue {
+    grid-area: blue;
+    background-color: blue;
+}
+.yellow {
+    grid-area: yellow;
+    background-color: yellow;
+}
+.green {
+    grid-area: green;
+    background-color: green;
+}
+.empty {
+    grid-area: empty;
+}
+.red:hover ~ .empty {
+    background: linear-gradient(to top, white, red);
+}
+.blue:hover ~ .empty {
+    background: linear-gradient(to top, white, blue);
+}
+.yellow:hover ~ .empty {
+    background: linear-gradient(to top, white, yellow);
+}
+.green:hover ~ .empty {
+    background: linear-gradient(to top, white, green);
+}
+.fix {
+    background-image: url(knight.png);
+    background-size: 100% 100%;
+    width: 10%;
+    aspect-ratio: 1/1;
+    z-index: 999;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+.text {
+    position: absolute;
+    top: -20%;
+    left: 5%;
+    background-color: white;
+    text-align: center;
+    height: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    border: 1px solid black;
+    padding: 5% 10%;
+    border-radius: 5px;
+    ani
+}
+.fix:hover .text {
+        opacity: 1;
+}
+.adaptiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.adaptiv .container {
+    width: 80%;
+    display: flex;
+    height: 500px;
+    background-color: whitesmoke;
+}
+.adaptiv .b1 {
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.adaptiv .textt {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.adaptiv .textt a {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+.adaptiv .b2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.adaptiv .img {
+    width: 40%;
+    background-image: url(b3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10%;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo {
+    height: 80%;
+    background-image: url(logo.webp);
+    aspect-ratio: 1/1;
+    background-size: 100% 100%;
+    border-radius: 100%;
+}
+.website {
+    display: flex;
+    gap: 20px;
+}
+.website a {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.vk {
+    background-image: url(vk.jpg);
+    background-size: 100% 100%;
+    aspect-ratio: 1/1;
+    height: 80%;
+}
+.tg {
+    background-image: url(tg.jpg);
+    background-size: 100% 100%;
+    aspect-ratio: 1/1;
+    height: 80%;
+}
+.tw {
+    background-image: url(tw.jpg);
+    background-size: 100% 100%;
+    aspect-ratio: 1/1;
+    height: 80%;
+}
+.website img {
+    border-radius: 100%;
+    height: 80px;
+}
+@media (max-width: 375px) {
+    body {
+        font-size: 3vw;
+    }
+    header div {
+        justify-content: space-between;
+    }
+    .images .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 250px);
+        grid-template-areas: 
+        "b1 b1"
+        "b4 b5"
+        "b4 b3"
+        "b2 b6"
+        "b2 b6"
+        "b7 b7";
+    }
+    .colors .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 250px);
+        grid-template-areas: 
+        "red blue"
+        "empty empty"
+        "yellow green";
+    }
+    .yellow:hover ~ .empty {
+    background: linear-gradient(to bottom, white, yellow);
+    }
+    .green:hover ~ .empty {
+        background: linear-gradient(to bottom, white, green);
+    }
+    .fix {
+        width: 20%;
+    }
+    .text {
+        width: 90%;
+        left: -20%;
+        top: -40%;
+    }
+    .adaptiv .container {
+        flex-direction: column;
+    }
+    .adaptiv .b1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+    .adaptiv .b2 {
+        width: 100%;
+        height: 50%;
+    }
+    .adaptiv .img {
+        width: 80%;
+    }
+    footer {
+        height: 100px;
+        flex-direction: column;
+    }
+    .website a {
+        height: 50px;
+    }
+    .logo {
+        height: 0;
+    }
 }
